@@ -122,3 +122,7 @@ body {
   .stroke-turquoise {
     stroke: var(--bs-turquoise);
   }
+
+  #poem {
+    z-index: 12;
+  }
