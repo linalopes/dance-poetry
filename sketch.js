@@ -99,6 +99,10 @@ function draw() {
     image(video, 0, 0, width, height);
     pop();
 
+    fill(255, 0, 0);
+    noStroke();
+    rect(width - 200, 150, 50, 50);
+
     // Debug: Check if poses are being detected
     console.log("Poses detected:", poses.length);
 
@@ -109,7 +113,7 @@ function draw() {
     for (let i = 0; i < maxPosesToDraw; i++) {
         let pose = poses[i];
         
-        // Get right elbow position (keypoint 8 in ML5's PoseNet)
+        // Get right elbow position (keypoint 8 in ML5's)
         let rightElbow = pose.keypoints[8];
         if (rightElbow && rightElbow.confidence > 0.1) {
             rightElbowX = width - rightElbow.x; // Adjust for mirrored video
