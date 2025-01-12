@@ -126,3 +126,7 @@ body {
   #poem {
     z-index: 12;
   }
+
+  #video-wrapper {
+    z-index: -1;
+  }
